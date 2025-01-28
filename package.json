@@ -27,5 +27,15 @@
         "dev": "tsup --format esm --dts --watch",
         "test": "vitest",
         "lint": "eslint --fix  --cache ."
+    },
+    "agentConfig": {
+        "pluginType": "elizaos:client:1.0.0",
+        "pluginParameters": {
+            "GITBOOK_SPACE_ID": {
+                "type": "string",
+                "minLength": 1,
+                "description": "GitBook space identifier"
+            }
+        }
     }
 }

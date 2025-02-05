@@ -96,7 +96,10 @@ var gitbookProvider = {
         return "";
       }
       const result = await response.json();
-      return result.answer?.text || "";
+      return `## GitBook Provider
+### Query: ${message.content.text}
+### Answer:
+${result.answer?.text || ""}`;
     } catch (error) {
       elizaLogger.error("\u274C Error in GitBook provider:", error);
       return "";
